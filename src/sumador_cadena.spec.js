@@ -13,4 +13,7 @@ describe("Calculadora de cadena", () => {
   it("Toma en cuenta cadena con varios números: Para una cadena “1,2,3” -> 6", () => {
     expect(sumarCadena("1,2,3")).toEqual(6);
   });
+  it('Se puede usar el caracter guion(-) como separador: “1-2,3” -> 6', () => {
+    expect(sumarCadena("1-2,3")).toEqual(6);
+  });
 });
