@@ -16,4 +16,7 @@ describe("Calculadora de cadena", () => {
   it('Se puede usar el caracter guion(-) como separador: “1-2,3” -> 6', () => {
     expect(sumarCadena("1-2,3")).toEqual(6);
   });
+  it('El usuario puede especificar el delimitador. Ejm: ";": “//[;] 6;7;4” -> 17', () =>{
+    expect(sumarCadena("//[;] 6;7;4")).toEqual(17);
+  });
 });
