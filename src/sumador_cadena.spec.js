@@ -19,4 +19,7 @@ describe("Calculadora de cadena", () => {
   it('El usuario puede especificar el delimitador. Ejm: ";": “//[;] 6;7;4” -> 17', () =>{
     expect(sumarCadena("//[;] 6;7;4")).toEqual(17);
   });
+  xit('Separadores por defecto mas el delimitador del usuario: “//[;] 6,3-2;1” -> 12', () =>{
+    expect(sumarCadena("//[;] 6,3-2;1")).toEqual(12);
+  });
 });

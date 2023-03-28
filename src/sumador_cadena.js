@@ -7,11 +7,11 @@ function sumarCadena(cadena) {
   if (cadena === "") {
     return 0;
   } else if (cadena.startsWith("//")) {
-    const separadorUsuario = cadena.match(regex);
+    let separadorUsuario = cadena.match(regex);
     listaSeparadores = new RegExp(separadorUsuario[1], "g");
     cadena = separadorUsuario[2];
   }
-  
+
   listaNumeros = separadorCadena(cadena, listaSeparadores);
   for (let i = 0; i < listaNumeros.length; i++) {
     suma += listaNumeros[i];
