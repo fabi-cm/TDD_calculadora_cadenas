@@ -13,8 +13,9 @@ function sumarCadena(cadena) {
   }
 
   listaNumeros = separadorCadena(cadena, listaSeparadores);
-  for (let i = 0; i < listaNumeros.length; i++) {
-    suma += listaNumeros[i];
+  let numerosValidos = listaNumeros.filter((numero) => numero <= 1000);
+  for (let i = 0; i < numerosValidos.length; i++) {
+    suma += numerosValidos[i];
   }
   return suma;
 }

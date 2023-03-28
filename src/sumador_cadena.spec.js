@@ -22,4 +22,7 @@ describe("Calculadora de cadena", () => {
   xit('Separadores por defecto mas el delimitador del usuario: “//[;] 6,3-2;1” -> 12', () =>{
     expect(sumarCadena("//[;] 6,3-2;1")).toEqual(12);
   });
+  it('Números mayores a 1000 deberían ser ignorados. Por ejemplo: “2, 1001” -> 2', () =>{
+    expect(sumarCadena("2, 1001")).toEqual(2);
+  });
 });
